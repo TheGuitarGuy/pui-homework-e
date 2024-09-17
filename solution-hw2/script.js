@@ -130,12 +130,12 @@ function addToCart(event) {
 
 //This function is resposible for changing the UI
 function updateCartUI() {
-    //Getting elements from the DOM
     const cartItemsContainer = document.getElementById('cart-items');
     const cartTotalElement = document.getElementById('cart-total');
     const cartTotalPopupElement = document.getElementById('cart-total-popup');
     const cartPopup = document.getElementById('cart-popup');
-    const cartCountElement = document.getElementById('cart-info');
+    const cartCountElement = document.getElementById('cart-count');
+    const cartTotalAmountElement = document.getElementById('cart-total-amount');
 
     let cartTotal = 0;
     cartItemsContainer.innerHTML = '';
@@ -151,22 +151,26 @@ function updateCartUI() {
         const listItem = document.createElement('li');
         listItem.innerHTML = `Glazing: ${glazingOption.name}<br>Pack Size: ${packSizeOption.size}<br>Price: $${item.price}`;
 
-        // listItem.innerHTML = cart
-
-        if (cartItemsContainer) {
-            cartItemsContainer.appendChild(listItem);
-        }
+        cartItemsContainer.appendChild(listItem);
     
         cartTotal += item.price;
     }
 
-    // This helps us check if elements exist to avoid errors
+    //This checks to ensure element exists so that we can fail gracefully
     if (cartTotalElement) {
-        cartTotalElement.textContent = cartTotal;
+        cartTotalElement.textContent = `$${cartTotal.toFixed(2)}`;
     }
 
     if (cartTotalPopupElement) {
-        cartTotalPopupElement.textContent = cartTotal
+        cartTotalPopupElement.textContent = `$${cartTotal.toFixed(2)}`;
+    }
+
+    if (cartCountElement) {
+        cartCountElement.textContent = cart.length;
+    }
+
+    if (cartTotalAmountElement) {
+        cartTotalAmountElement.textContent = `$${cartTotal.toFixed(2)}`;
     }
 
     if (cartPopup) {
@@ -175,11 +179,8 @@ function updateCartUI() {
             cartPopup.style.display = 'none'; 
         }, 3000);
     }
-    if (cartCountElement) {
-        cartCountElement.textContent = cart.length; 
-    }
-    
 }
+
 
 // I got this idea from here https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
 document.addEventListener('DOMContentLoaded', () => {

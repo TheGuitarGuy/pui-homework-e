@@ -170,6 +170,10 @@ html, body {
     padding-inline: 20px;
 }
 
+.cart-summary{
+  font-size: 12px;
+}
+
   
   /* This styles the add to cart container label*/
   .cart-button-container label{
