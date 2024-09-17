@@ -129,10 +129,10 @@ input[type="radio"] {
   color: black;
   font-size: 15px;
   text-align: center;
-  line-height: 26px;
+  line-height: 30px;
 }
 
-/* This styles the interaction with the pack size buttons*/
+/* This styles the interaction with the pack size buttons See this for the inspiration for this approach: https://stackoverflow.com/questions/24516958/styling-radio-buttons-into-a-square */
 .product-selector input[type="radio"]:checked + .pack-size-button {
   background-color: lightgray;
 } 
