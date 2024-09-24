@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.364ebbea.css",
-    "main.js": "./static/js/main.1e75281b.js",
+    "main.css": "./static/css/main.6a9b0354.css",
+    "main.js": "./static/js/main.44c65edd.js",
     "static/js/453.42de2504.chunk.js": "./static/js/453.42de2504.chunk.js",
     "static/media/apple-cinnamon-roll.jpg": "./static/media/apple-cinnamon-roll.49f60af85b0e955dad15.jpg",
     "static/media/double-chocolate-cinnamon-roll.jpg": "./static/media/double-chocolate-cinnamon-roll.dc7182fd330f44e75603.jpg",
@@ -11,12 +11,12 @@
     "static/media/logo-01.svg": "./static/media/logo-01.b2f9cdda6d5cda1ce2ffc47e6b747dd4.svg",
     "static/media/walnut-cinnamon-roll.jpg": "./static/media/walnut-cinnamon-roll.e51000e24310a638db27.jpg",
     "index.html": "./index.html",
-    "main.364ebbea.css.map": "./static/css/main.364ebbea.css.map",
-    "main.1e75281b.js.map": "./static/js/main.1e75281b.js.map",
+    "main.6a9b0354.css.map": "./static/css/main.6a9b0354.css.map",
+    "main.44c65edd.js.map": "./static/js/main.44c65edd.js.map",
     "453.42de2504.chunk.js.map": "./static/js/453.42de2504.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.364ebbea.css",
-    "static/js/main.1e75281b.js"
+    "static/css/main.6a9b0354.css",
+    "static/js/main.44c65edd.js"
   ]
 }
