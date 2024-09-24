@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ProductSelector.css';
 
+// Import all product images
 import originalCinnamonRoll from '../assets/products/original-cinnamon-roll.jpg';
 import appleCinnamonRoll from '../assets/products/apple-cinnamon-roll.jpg';
 import raisinCinnamonRoll from '../assets/products/raisin-cinnamon-roll.jpg';
