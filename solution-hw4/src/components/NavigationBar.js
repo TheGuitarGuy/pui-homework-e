@@ -1,35 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavStyle.css'; 
-import './MainGrid.css';
 import logo from '../assets/logo/logo-01.svg';
-
-const NavigationBar = () => {
-  console.log('Navbar loaded');
-
+// This is the navigation bar component which houses the logo, nav buttons, and the toggled cart popup.
+const NavigationBar = ({ cartItems, popupVisible }) => {
+  const totalAmount = cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2);
   return (
     <header>
       <nav>
-        <img 
-          id="company-logo" 
+        <img
+          id="company-logo"
           src={logo}
-          alt="Company logo for Bun Bun Bake Shop"
+          alt="Company logo for Bun Bun Bake Shop showing a drawing of a cinnamon roll"
         />
+
         <ul>
+          {/* This contains some of the cart popup logic  */}
           <li id="cart-container">
-            <Link id="cart-nav" to="/cart">Cart</Link>
-            <div id="cart-popup" className="cart-popup">
-              <p>Added to cart: </p>
-              <p><span id="cart-items"></span></p>
-              <p>Total Amount: $<span id="cart-total-popup">0.00</span></p>
+            <a id="cart-nav" href="cart.html">Cart</a>
+
+            <div id="cart-popup" className={`cart-popup ${popupVisible ? 'active' : 'inactive'}`}>
+              <p>Added to cart:</p>
+              <p></p>
+              <p>Total items: {cartItems.length}</p>
+              <p>Total Amount: ${totalAmount}</p>
+              
             </div>
+            {/* This is the cart summary at the top right */}
             <div className="cart-summary">
-              <span id="cart-count">0</span> item(s)
-              <div>Total: <span id="cart-total-amount">$0.00</span></div>
+              <span id="cart-count">{cartItems.length}</span> item(s)
+              <div>
+                Total: <span id="cart-total-amount">${totalAmount}</span>
+              </div>
             </div>
           </li>
           <li id="products-nav-element">
-            <Link to="/products">Products</Link>
+            <a href="products.html">Products</a>
           </li>
         </ul>
       </nav>
