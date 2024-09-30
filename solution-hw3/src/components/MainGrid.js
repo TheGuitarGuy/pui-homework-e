@@ -1,7 +1,8 @@
 import React from 'react';
 import ProductSelector from './ProductSelector';
-import './MainGrid.css'; // Ensure correct CSS file is imported
+import './MainGrid.css'; 
 
+// This is how I found to map each product to their details
 const products = [
   { id: 1, image: 'original-cinnamon-roll.jpg', name: 'Original Cinnamon Roll', basePrice: 2.49 },
   { id: 2, image: 'apple-cinnamon-roll.jpg', name: 'Apple Cinnamon Roll', basePrice: 2.99 },

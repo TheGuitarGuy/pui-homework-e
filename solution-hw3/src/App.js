@@ -1,23 +1,14 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import NavigationBar from './components/NavigationBar';
+import Home from './components/Home';
 import MainGrid from './components/MainGrid';
-import Navbar from './components/NavigationBar'
+import NavigationBar from '../../solution-hw4/src/components/NavigationBar';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar /> 
-        <Routes>
-          <Route path="/" element={<MainGrid />} />
-          <Route path="/products" element={<MainGrid />} />
-          {/* Define more routes as needed */}
-        </Routes>
-      </div>
-    </Router>
+    <Home/>
   );
 }
 
 export default App;
-

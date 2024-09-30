@@ -2,7 +2,6 @@
 import React from 'react';
 import Navbar from './NavigationBar'; // Adjust based on your folder structure
 import MainGrid from './MainGrid';
-import './Home.css';  
 
 const Home = () => {
   return (

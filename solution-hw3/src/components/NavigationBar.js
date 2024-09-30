@@ -1,32 +1,38 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavStyle.css'; 
+import React from "react";
+import logo from '../assets/logo/logo-01.svg';
 
-const Navbar = () => {
-  console.log('Navbar loaded');
+const NavigationBar = () => {
   return (
     <header>
       <nav>
-        <img 
-          id="company-logo" 
-          src={require('../assets/logo/logo-01.svg').default} 
-          alt="Company logo for Bun Bun Bake Shop"
+      <img
+          id="company-logo"
+          src={logo}
+          alt="Company logo for Bun Bun Bake Shop showing a drawing of a cinnamon roll"
         />
+
         <ul>
           <li id="cart-container">
-            <Link id="cart-nav" to="/cart">Cart</Link>
+            <a id="cart-nav" href="cart.html">Cart</a>
             <div id="cart-popup" className="cart-popup">
-              <p>Added to cart: </p>
-              <p><span id="cart-items"></span></p>
-              <p>Total Amount: $<span id="cart-total-popup">0.00</span></p>
+              <p>Added to cart:</p>
+              <p>
+                <span id="cart-items"></span>
+              </p>
+              <p>
+                Total Amount: $<span id="cart-total-popup">0.00</span>
+              </p>
             </div>
             <div className="cart-summary">
               <span id="cart-count">0</span> item(s)
-              <div>Total: <span id="cart-total-amount">$0.00</span></div>
+              <div>
+                Total: <span id="cart-total-amount">$0.00</span>
+              </div>
             </div>
+            <ul id="cart-items"></ul>
           </li>
           <li id="products-nav-element">
-            <Link to="/products">Products</Link>
+            <a href="products.html">Products</a>
           </li>
         </ul>
       </nav>
@@ -34,4 +40,5 @@ const Navbar = () => {
     </header>
   );
 };
-export default Navbar;
+
+export default NavigationBar;
