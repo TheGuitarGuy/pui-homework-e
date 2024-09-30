@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/solution-hw4/static/css/main.02e3682d.css",
-    "main.js": "/solution-hw4/static/js/main.dc11093f.js",
-    "static/js/453.42de2504.chunk.js": "/solution-hw4/static/js/453.42de2504.chunk.js",
-    "static/media/apple-cinnamon-roll.jpg": "/solution-hw4/static/media/apple-cinnamon-roll.49f60af85b0e955dad15.jpg",
-    "static/media/double-chocolate-cinnamon-roll.jpg": "/solution-hw4/static/media/double-chocolate-cinnamon-roll.dc7182fd330f44e75603.jpg",
-    "static/media/strawberry-cinnamon-roll.jpg": "/solution-hw4/static/media/strawberry-cinnamon-roll.d77fc3751f757be76044.jpg",
-    "static/media/raisin-cinnamon-roll.jpg": "/solution-hw4/static/media/raisin-cinnamon-roll.1beae169057e675aca32.jpg",
-    "static/media/original-cinnamon-roll.jpg": "/solution-hw4/static/media/original-cinnamon-roll.cc1ea842c5d980a0fa60.jpg",
-    "static/media/logo-01.svg": "/solution-hw4/static/media/logo-01.b2f9cdda6d5cda1ce2ffc47e6b747dd4.svg",
-    "static/media/walnut-cinnamon-roll.jpg": "/solution-hw4/static/media/walnut-cinnamon-roll.e51000e24310a638db27.jpg",
-    "index.html": "/solution-hw4/index.html",
-    "main.02e3682d.css.map": "/solution-hw4/static/css/main.02e3682d.css.map",
-    "main.dc11093f.js.map": "/solution-hw4/static/js/main.dc11093f.js.map",
-    "453.42de2504.chunk.js.map": "/solution-hw4/static/js/453.42de2504.chunk.js.map"
+    "main.css": "/static/css/main.02e3682d.css",
+    "main.js": "/static/js/main.c4f91160.js",
+    "static/js/453.42de2504.chunk.js": "/static/js/453.42de2504.chunk.js",
+    "static/media/apple-cinnamon-roll.jpg": "/static/media/apple-cinnamon-roll.49f60af85b0e955dad15.jpg",
+    "static/media/double-chocolate-cinnamon-roll.jpg": "/static/media/double-chocolate-cinnamon-roll.dc7182fd330f44e75603.jpg",
+    "static/media/strawberry-cinnamon-roll.jpg": "/static/media/strawberry-cinnamon-roll.d77fc3751f757be76044.jpg",
+    "static/media/raisin-cinnamon-roll.jpg": "/static/media/raisin-cinnamon-roll.1beae169057e675aca32.jpg",
+    "static/media/original-cinnamon-roll.jpg": "/static/media/original-cinnamon-roll.cc1ea842c5d980a0fa60.jpg",
+    "static/media/logo-01.svg": "/static/media/logo-01.b2f9cdda6d5cda1ce2ffc47e6b747dd4.svg",
+    "static/media/walnut-cinnamon-roll.jpg": "/static/media/walnut-cinnamon-roll.e51000e24310a638db27.jpg",
+    "index.html": "/index.html",
+    "main.02e3682d.css.map": "/static/css/main.02e3682d.css.map",
+    "main.c4f91160.js.map": "/static/js/main.c4f91160.js.map",
+    "453.42de2504.chunk.js.map": "/static/js/453.42de2504.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.02e3682d.css",
-    "static/js/main.dc11093f.js"
+    "static/js/main.c4f91160.js"
   ]
 }
