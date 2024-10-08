@@ -32,6 +32,11 @@ const calculatePrice = (basePrice, glazingId, packSizeId) => {
   return ((basePrice + glazingPriceChange) * packSizeMultiple).toFixed(2);
 };
 
+const getGlazingName = (glazingId) => {
+  const glazingOption = options.glazing.find(option => option.id === glazingId);
+  return glazingOption ? glazingOption.name : 'Unknown Glazing';
+};
+
 const ProductSelector = ({ product, addToCart }) => {
   const { id, name, basePrice } = product;
 
@@ -62,7 +67,7 @@ const ProductSelector = ({ product, addToCart }) => {
       price: parseFloat(price),
     };
     
-    addToCart(cartItem); // Call the addToCart function passed from MainGrid
+    addToCart(cartItem); 
   };
 
   return (

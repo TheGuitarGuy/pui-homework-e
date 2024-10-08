@@ -214,3 +214,7 @@ display: none;
 .cart-summary {
 font-size: 12px;
 }
+
+#lastCartItem{
+  font-weight: bold;
+}
