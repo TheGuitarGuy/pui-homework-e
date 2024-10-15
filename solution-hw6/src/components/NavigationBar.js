@@ -2,12 +2,13 @@ import React from 'react';
 import logo from '../assets/logo/logo-01.svg';
 
 const NavigationBar = ({ cartItems, popupVisible, onCartClick }) => {
-  const totalAmount = cartItems.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+  console.log('cartItems in NavigationBar:', cartItems);
+
+  const totalAmount = cartItems.reduce((sum, item) => sum + (item.price || 0), 0).toFixed(2);
   const lastCartItem = cartItems.length > 0 ? cartItems[cartItems.length - 1] : null;
 
   return (
     <header>
-      {/* This is the top navigation */}
       <nav>
         <img
           id="company-logo"
@@ -21,6 +22,7 @@ const NavigationBar = ({ cartItems, popupVisible, onCartClick }) => {
               Cart
             </a>
 
+            {/* Popup for last added item */}
             <div id="cart-popup" className={`cart-popup ${popupVisible ? 'active' : 'inactive'}`}>
               <p>Added to cart:</p>
               {lastCartItem ? (
@@ -35,6 +37,7 @@ const NavigationBar = ({ cartItems, popupVisible, onCartClick }) => {
               )}
             </div>
 
+            {/* Cart Summary */}
             <div className="cart-summary">
               <span id="cart-count">{cartItems.length}</span> item(s)
               <div>

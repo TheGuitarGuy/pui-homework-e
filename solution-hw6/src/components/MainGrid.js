@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductSelector from './ProductSelector';
 import './MainGrid.css';
 import NavigationBar from './NavigationBar';
@@ -6,6 +6,7 @@ import SearchBar from './SearchBar';
 import SortSelector from './SortSelector';
 import ShoppingCart from './ShoppingCart';
 
+// This is the data for all the products
 const products = [
   { id: 1, name: 'Original Cinnamon Roll', basePrice: 2.49, glazing: 'Keep original', packSize: 1, image: 'solution-hw5/src/assets/products/original-cinnamon-roll.jpg' },
   { id: 2, name: 'Apple Cinnamon Roll', basePrice: 2.99, glazing: 'Sugar milk', packSize: 1, image: 'solution-hw5/src/assets/products/apple-cinnamon-roll.jpg' },
@@ -16,10 +17,19 @@ const products = [
 ];
 
 const MainGrid = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCartItems = localStorage.getItem('cartItems');
+    return savedCartItems ? JSON.parse(savedCartItems) : [];
+  });
+
   const [popupVisible, setPopupVisible] = useState(false);
   const [cartVisible, setCartVisible] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState(products);
+// This allows for localStorage use
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const addToCart = (cartItem) => {
     setCartItems((prevItems) => [...prevItems, cartItem]);
     setPopupVisible(true);

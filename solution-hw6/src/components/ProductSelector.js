@@ -8,8 +8,7 @@ import walnutCinnamonRoll from '../assets/products/walnut-cinnamon-roll.jpg';
 import doubleChocolateCinnamonRoll from '../assets/products/double-chocolate-cinnamon-roll.jpg';
 import strawberryCinnamonRoll from '../assets/products/strawberry-cinnamon-roll.jpg';
 
-const options = {
-  // This helps map ids to the string name
+export const options = {
   glazing: [
     { id: 'keep-original', name: 'Keep original', priceChange: 0.00 },
     { id: 'sugar-milk', name: 'Sugar milk', priceChange: 0.00 },
@@ -23,6 +22,7 @@ const options = {
     { id: 12, size: 12, priceMultiple: 10 }
   ]
 };
+
 // This calculates the price
 const calculatePrice = (basePrice, glazingId, packSizeId) => {
   const glazingOption = options.glazing.find((g) => g.id === glazingId);

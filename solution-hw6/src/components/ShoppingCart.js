@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainGrid.css';
 
-// Define the options object or import it
+
 const options = {
   glazing: [
     { id: 'keep-original', name: 'Keep original', priceChange: 0.00 },
@@ -23,11 +23,10 @@ const getGlazingName = (glazingId) => {
 };
 
 const ShoppingCart = ({ cartItems, setCartItems }) => {
-
   const totalCost = cartItems.reduce((sum, item) => sum + (item.price || 0), 0).toFixed(2);
-
-  const removeFromCart = (itemToRemove) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemToRemove.id));
+// This bit gets the removal item by its index which helps ensure that the correct item is removed
+  const removeFromCart = (indexToRemove) => {
+    setCartItems((prevItems) => prevItems.filter((_, index) => index !== indexToRemove));
   };
 
   return (
@@ -47,7 +46,7 @@ const ShoppingCart = ({ cartItems, setCartItems }) => {
                   <p>Glazing: {getGlazingName(item.glazing)}</p> 
                   <p>Pack Size: {item.packSize}</p>
                   <p style={{ fontWeight: 'bold' }}> ${item.price ? item.price.toFixed(2) : '0.00'}</p>
-                  <button onClick={() => removeFromCart(item)} className="text-button"> Remove </button>
+                  <button onClick={() => removeFromCart(index)} className="text-button"> Remove </button>
                 </div>
               </div>
             ))}
@@ -57,7 +56,6 @@ const ShoppingCart = ({ cartItems, setCartItems }) => {
         <p>Your cart is empty</p>
       )}
     </div>
-
   );
 };
 
