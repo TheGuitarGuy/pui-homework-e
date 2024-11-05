@@ -110,76 +110,103 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
+Pod Dating is a way to find people in person first. You go to an event, meet people there, like and pass on people that you met in person. It's that simple. Gone are the days of meeting online strangers that may or may not exist. Join the Pod. 
 
 ## High-Fi Prototypes
 
 ### *Prototype 1*
 
-![title for prototype1](images/prototype1.png)
+![Pod Dashboard - Main View](dashboard-1.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+
+
+
+
+
+Some of the main things I found in the feedback was the navigation (going from event creation to the dashboard), microinteractions, and the date picker. 
 
 ### *Prototype 2*
-
-…
+![Info View](info-1.png)
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design. 
+I conducted some usability tests and also asked a small business owner about what they saw in the dashboard and suggestions on how it might be improved. The usability test was conducted with my Figma prototype and I asked a few questions to understand their business (a mini golf place) and how I could be of service to them. 
+
+In the usability test, I found a similar problem set that was also noted in our presentations. The first thing that I found is that people generally thought that the dashboard should lead to a new page and should be a separate page. Next, I found that the current date picker was lacking, so I am planning on using a new one (though the one that I am using now is still not necessarily final). It will need to select both date and time, so I am going to work to find one that can do that well or consider two separate input fields as other websites often do. I also found with one of my interviewees that it may be useful to be able to integrate with other event management systems that they may already use which is something I’ll consider (this would be a future goal).
+
+I incorporated this feedback into my design by ensuring the dashboard had a big button that allowed users to create an event and got rid of the side panel that was unnecessary for this project right now. 
+
 
 ## Updated Designs
 
 Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
 
-## Feedback Summary
+![Date View](date.png)
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words). 
+![Dashboard View](dashboard-2.png)
+
+## Feedback Summary
+  The in-class feedback largely consisted of some general feedback such as getting rid of the side panel and adding microinteractions both of which I think are good. For the micro-interactions, I think just some hover effects and animated charts would be good. I do not want the dashboard to become burdened with animations that do not convey anything. I like some of the ideas around the comparison between using Pod and not using Pod, but I would worry that this could become complicated with my backend and not provide as much value. It would also be tough to distinguish between Pod tickets and non Pod tickets for example as I would not necessarily have access to this data. For those reasons, I will not pursue that. Currently, I will focus on micro-interactions, clear navigation, and clean backend logic to ensure data integrity and validity. 
+  As for the tooltips, I think those could be helpful, but I’d want to ensure that they were not your average, ugly tooltips that plague so many interfaces today. I would also only use them on relevant visualizations that have a clear need to be explained (I generally try to avoid anything that can be construed as a “pop-up”). 
+  I am also strongly considering different charts as well, but it is slightly constrained by the data I’ll have available as this is meant to actually be used! 
+
 
 ## Milestones
 
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
+
 
 ### *Implementation Plan*
 
 - [ ] Week 9 Oct 28 \- Nov 1:
   - [X] FP1 due
-  - [ ] ...
+  - [X] Conduct usability testing to find out which design will work best
   
 - [ ] Week 10 Nov 4 \- Nov 8:   
-  - [ ] FP2 due
+  - [X] FP2 due
+  - [ ] Set to work on creating the skeleton of this website 
+  - [X] Finalize designs that I will be working on
+  - 
 
 - [ ] Week 11 Nov 11 \- Nov 15:  
-- [ ] Week 12 Nov 18 \- Nov 22:   
+  - [ ] Create the create event flow and link it to firebase
+  - [ ] Ensure that events are able to show up on the Pod Dating app
+  - [ ] Debug Pod Dating App as necessary 
+- [ ] Week 12 Nov 18 \- Nov 22:
+  - [ ] Finish creating the event creation flow and ensure that poster creation is handled correctly (Poster creation will generate a QR code into a poster so that business owners can hang up the poster and users can check in to the event)   
 - [ ] Week 13 Nov 25 \- Nov 29:  
+  - [ ] Work on the dashboard creating data visualizations from backend data. 
+  - [ ] Ensure that there is a seamless experience between dashboard and event creation 
 
   - [ ] Thanksgiving  
 - [ ] Week 14 Dec 2 \- Dec 6:  
+  - [ ] Add microinteractions that make the experience feel engaging such as bouncy buttons (ripple effect), tooltips (as necessary), and animated charts to ensure they feel professional.
   - [ ] FP4 due 
 
 ### *Libraries and Other Components*
-
-List the JS libraries and other components (if applicable) that you plan to use. 
+https://flatpickr.js.org/examples/ (This will be used for the date picker)
+I'll use react for this project.
+I'm sure there are many libraries that I'll use as necessary. 
 * 
 
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
+I'll use AI for this project to take away some of the need for the "intellectual manual labor." For example, I'll focus on using it for genersting code to fit the visual standards I set for myself. I'll also use it to help me brainstorm ideas of how to do certain things such as connecting the database for example. I like using AI to understand the problem deeper and focus on understanding the general concepts to a deeper degree. I'll balance this, of course, with the requirement to be able to explain each line of code.  
 
 ### *Tool Use*
 
  What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
 
 * ChatGPT  
-  * I will use it for … because it can help me …  
-  * I will not use it for … because it might not be able to help me with …   
+  * I will use it for code generation for components and "boilerplate" code because it can help me save time focusing on the usability component of this project.
+  * I will not use it for generating massive amounts of code because it will not help me understand when things go wrong. 
+  * I will be careful using it for logic generation as it can be wrong and can be easy to not understand exactly what the code is doing. 
 * GitHub Copilot  
-* ...
+* I will use Github Copilot for similar use cases to ChatGPT as needed 
 
 ### *Responsible Use*
 
-How would you use Generative AI responsibly? 
+I want to ensure that I use AI to allow myself to focus more on the usability and overall experience of my website. I want to ensure, however, that I do not become so reliant on my use of AI that it becomes difficult to understand what code is doing which can certainly be a temptation. 
 
 ---
 
