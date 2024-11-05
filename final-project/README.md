@@ -139,7 +139,7 @@ I incorporated this feedback into my design by ensuring the dashboard had a big 
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+In these screenshots, I focused on ensuring that the flow from the dashboard to the event creation was as seamless as possible while also addressing concerns about the date picker. In my full coded version, I'll focus more on micro-interactions and other such delightful experiences. 
 
 ![Date View](date.png)
 
